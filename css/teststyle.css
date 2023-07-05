@@ -1,0 +1,156 @@
+/*SET UP*/
+:root{
+    --color1: #d0d058;
+    --color2: #a0a840;
+    --color3: #708028;
+    --color4: #405010;
+}
+html {
+    color: var(--color4);
+    background-color: var(--color1);
+    font-family: 'apple_regular';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'apple_regular';
+    src: url('../fonts/gbfont.woff2') format('woff2'),
+        url('../fonts/gbfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color3);
+}
+
+/*BOX CLASSES*/
+.box {
+    height: 70vh;
+    width: 70vw;
+    padding: 10px;
+    overflow-y: auto;
+    border: 5px solid var(--color3);
+    box-shadow: 6px 6px 0 0 var(--color4);
+    background-color: var(--color2);
+}
+
+/*HEADER PULSE*/
+.headerPulse {
+    text-align: center;
+    -webkit-animation: color_change 1s infinite alternate;
+    -moz-animation: color_change 1s infinite alternate;
+    -ms-animation: color_change 1s infinite alternate;
+    -o-animation: color_change 1s infinite alternate;
+    animation: color_change 1s infinite alternate;
+    animation-timing-function: steps(4, end);
+}
+
+@-webkit-keyframes color_change {
+    from {
+        color: var(--color3);
+    }
+
+    to {
+        color: var(--color4);
+    }
+}
+
+@-moz-keyframes color_change {
+    from {
+        color: var(--color3);
+    }
+
+    to {
+        color: var(--color4);
+    }
+}
+
+@-ms-keyframes color_change {
+    from {
+        color: var(--color3);
+    }
+
+    to {
+        color: var(--color4);
+    }
+}
+
+@-o-keyframes color_change {
+    from {
+        color: var(--color3);
+    }
+
+    to {
+        color: var(--color4);
+    }
+}
+
+@keyframes color_change {
+    from {
+        color: var(--color3);
+    }
+
+    to {
+        color: var(--color4);
+    }
+}
+
+/*HEADER COMPONENTS*/
+#header {
+    height: 5vh;
+    width: 70vw;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+#header * {
+    display: inline;
+    padding: 5px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#logo {
+    height: 100%;
+}
+
+#cursor {
+    position: relative;
+    height: 50%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+/*THEME COMPONENTS*/
+#themeToggle{
+    margin: 5px;
+    height: 10vh;
+    position: absolute;
+    right: 0;
+    top:0;
+
+}
