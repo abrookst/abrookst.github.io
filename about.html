@@ -15,22 +15,20 @@
   <center>
     <div id="header">
       <a href="./index.html"><img src="./images/logolight.png" id="logo"></a>
-      <a href="./about.html"><p><img id="cursor" src="./images/hand.png">About Me</p></a>
-      <a href="./resume.html"><p><img id="cursor" class="hidden" src="./images/hand.png">Resume</p></a>
-      <a href="./contact.html"><p><img id="cursor" class="hidden" src="./images/hand.png">Contact</p></a>
+      <a href="./about.html"><p><img class="cursor" src="./images/hand.png">About Me</p></a>
+      <a href="./resume.html"><p><img class="cursor hidden" src="./images/hand.png">Resume</p></a>
+      <a href="./contact.html"><p><img class="cursor hidden" src="./images/hand.png">Contact</p></a>
     </div>
     <img id="themeToggle" src="./images/dark.png">
     <div class="box">
       <h1 class="headerPulse">About Me:</h1>
       <p>How much do you want to know about me?</p>
       <!--thanks for the idea junfero-->
-      <div>
-        <div id='tldr-button' class='text-module t'>TLDR</div>
-        <div autofocus id='default-button' class='text-module t'>Default</div>
-        <div id='TMI-button' class='text-module t'>TMI</div>
+      <div class="selectorBox">
+        <div id='tldr-button' class='text-module'><img class="hidden abtcursor" src="./images/hand.png"> TLDR</div>
+        <div id='default-button' class='text-module'><img class="hidden abtcursor" src="./images/hand.png"> Default</div>
+        <div id='TMI-button' class='text-module'><img class="hidden abtcursor" src="./images/hand.png"> TMI</div>
       </div>
-      <br>
-      <hr>
       <br>
       <!--TLDR-->
       <div id='tldr' class='subdescrip'>
@@ -42,9 +40,9 @@
       <div id='default' class='subdescrip'>
         <p>Hello! My name is Ali Brooks.</p>
         <br>
-        <p>I'm a computer scientist, web developer, and game designer.</p>
+        <p>I'm a computer scientist, web designer, and game developer.</p>
         <br>
-        <p>I'm attending at Rensslear Polytechnic Institute for my Bachelors in Computer Science with a dual in ITWS.
+        <p>I'm attending at Rensslear Polytechnic Institute for my Bachelors in Computer Science with a dual in Information Technology & Web Science.
         </p>
         <br>
         <p>I love all aspects of CS, but I particularly love artificial inteligence, web design, virtual reality,
@@ -80,30 +78,7 @@
           shelters, working in bee hives, and diving down research rabbit holes to scratch my curiosity itch!</p>
         <br>
       </div>
-      <script>
-        const textModules = document.getElementsByClassName('text-module');
-        const textLines = document.getElementsByClassName('subdescrip');
-
-        function setModule(setting) {
-          for (txt of textLines) {
-            if (txt.id == setting) txt.style.display = 'block';
-            else txt.style.display = 'none';
-          }
-        }
-
-        textModules[1].style.borderStyle = 'solid';
-        setModule('default');
-
-        for (let index = 0; index < textModules.length; index++) {
-          let mod = textModules[index];
-          mod.addEventListener('click', () => {
-            for (other of textModules) other.style.borderStyle = 'hidden';
-            mod.style.borderStyle = 'solid';
-            setModule(mod.id.split('-')[0]);
-          });
-          mod.addEventListener('mouseover', () => mod.style.cursor = 'pointer');
-        }
-      </script>
+      <script src="./scripts/aboutoggle.js"></script>
     </div>
     <p>inspired by ©| '89</p>
   </center>

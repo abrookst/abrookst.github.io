@@ -137,9 +137,14 @@ a {
     height: 100%;
 }
 
-#cursor {
+.cursor {
     position: relative;
     height: 50%;
+}
+
+.abtcursor{
+
+    height: 15px;
 }
 
 .hidden {
@@ -153,4 +158,16 @@ a {
     right: 0;
     top:0;
 
+}
+
+/*ABOUT TOGGLE*/
+.selectorBox{
+    border: 5px solid var(--color3);
+    box-shadow: 6px 6px 0 0 var(--color4);
+    background-color: var(--color1);
+    width: fit-content;
+    padding: 4px;
+}
+.text-module{
+    cursor: pointer;
 }
