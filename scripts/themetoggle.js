@@ -39,6 +39,7 @@ $(document).ready(function () {
             document.getElementById('themeToggle').src  = './images/light.png';
             document.getElementById('logo').src  = './images/logodark.png';
         }
+        document.getElementById('projectIframe').contentWindow.location.reload();
         console.log(document.cookie);
         return false;
     });

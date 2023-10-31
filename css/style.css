@@ -8,6 +8,10 @@
 html {
     color: var(--color4);
     background-color: var(--color1);
+    
+}
+
+*{
     font-family: 'apple_regular';
 }
 
@@ -46,13 +50,47 @@ a {
 
 /*BOX CLASSES*/
 .box {
+    margin:auto;
     height: 70vh;
-    width: 70vw;
+    width: 70%;
     padding: 10px;
     overflow-y: auto;
     border: 5px solid var(--color3);
     box-shadow: 6px 6px 0 0 var(--color4);
     background-color: var(--color2);
+}
+
+.projectWrapper > .box{
+    margin: 0px;
+}
+
+.projectImg{
+    max-width: 100%;
+    margin-left: -8px;
+    border: 5px solid var(--color3);
+    box-shadow: 6px 6px 0 0 var(--color4);
+}
+
+.projectNav{
+    height: 70vh;
+    width: 15%;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 5px solid var(--color3);
+    box-shadow: 6px 6px 0 0 var(--color4);
+    background-color: var(--color2);
+}
+.projectWrapper{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /*HEADER PULSE*/
@@ -162,6 +200,7 @@ a {
 
 /*ABOUT TOGGLE*/
 .selectorBox{
+    margin:auto;
     border: 5px solid var(--color3);
     box-shadow: 6px 6px 0 0 var(--color4);
     background-color: var(--color1);
@@ -170,4 +209,25 @@ a {
 }
 .text-module{
     cursor: pointer;
+}
+
+/*MISC CSS*/
+
+input[type=button], input[type="file"]::file-selector-button, input[type=submit], input[type=reset] {
+    background-color: var(--color2);
+    border: 3px solid var(--color3);
+    color: var(--color4);
+    font-family: 'apple_regular';
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*PROJECT CSS*/
+.projectCover{
+    background-color: var(--color2);
 }
