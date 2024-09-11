@@ -8,27 +8,91 @@
     <title>AliB - Home</title>
     <link rel="icon" type="image/x-icon" href="/images/icon.ico">
     <script src="./scripts/code.jquery.com_jquery-3.7.0.min.js"></script>
-    <script src="./scripts/themetoggle.js"></script>
   </head>
 
   <body>
-    <div class="center">
-      <div id="header">
-        <a href="./index.html"><img src="./images/logolight.png" id="logo"></a>
-        <a href="./about.html"><p><img class="cursor hidden" src="./images/hand.png">About Me</p></a>
-        <a href="./resume.html"><p><img class="cursor hidden" src="./images/hand.png">Resume</p></a>
-        <a href="./contact.html"><p><img class="cursor hidden" src="./images/hand.png">Contact</p></a>
-        <a href="./projects.html"><p><img class="cursor hidden" src="./images/hand.png">Projects</p></a>
-      </div>
-      <img id="themeToggle" src="/images/dark.png">
-      <div class="box">
-        <h1 class="headerPulse">Welcome!</h1>
-        <p>my name is ali brooks, and welcome to my resume website! to learn more about me, feel free to click on any of the pages above!</p>
-        <img src="./images/me.png" style="border: 5px solid var(--color3);
-        box-shadow: 6px 6px 0 0 var(--color4);">
-      </div>
-      <p>inspired by ©| '89</p>
-    </div>
-  </body>
+      <div id="mainContent">
+        <h1 id="title">Ali Brooks</h1>
+        <h2 id="subTitle">Student, Researcher, and Gameplay/Graphics Programmer</h2>
+        <br>
 
+        <h3 id="About">About:</h3>
+        <p>Hello! My name is Ali Brooks. I'm a current Junior studying Computer Science and Mathematics at Rensselaer Polytechnic Institute. I have taken multiple high-level classes so far, such as Graph Theory, Computer Vision, and Linear Algebra.</p>
+        <br>
+        <p>I've had an internship every year thus far during my schooling. All of these internships have been at notable AAA studios. My freshman summer, I worked at Firaxis Games, as a UI/UX Engineer, working on Civilization VII. Then, my sophomore summer, I worked on Diablo IV for Blizzard Entertainment as a Gameplay Engineer.</p>
+        <br>
+        <p>In addition to my school and work, I am constantly working on fun new projects, that you can see below in the projects section.</p>
+        <br>
+        <p>If you'd like to contact me, you can do so below in the contact section. I'd love to chat!</p>
+        <br>
+
+        <h3 id="Portfolio">Portfolio Highlights:</h3>
+        <p>Click on a project for a picture.</p>
+        <script src="./scripts/projectSwitch.js"></script>
+        <div id="dsPortfolio">
+          <div id="leftPortfolio">
+            <div class="pictochat" onclick="projectSwitch('https://raw.githubusercontent.com/abrookst/raytracing/main/final.png')">
+              <div class="pictochat-header">Raytracing</div>
+              <div class="pictochat-content">
+              A simple raytracer built in C++.
+              <br>
+              <a target="_blank" href="https://github.com/abrookst/Raytracing">Github</a>
+              </div>
+            </div>
+
+            <div class="pictochat" onclick="projectSwitch('./images/raycast sample.gif')">
+              <div class="pictochat-header">Raycasting</div>
+              <div class="pictochat-content">
+              A raycaster built in C++, similar to the original Wolfenstein.
+              <br>
+              <a target="_blank" href="https://github.com/abrookst/raycasting">Github</a>
+              </div>
+            </div>
+
+          </div>
+          <div id="rightPortfolio">
+            Nothing Selected...
+          </div>
+        </div>
+        <p>For more projects, either visit my <a target="_blank" href="https://github.com/abrookst">Github</a> or check out my <a target="_blank" href="https://abrookst.itch.io/">Itch.io</a></p>
+
+        <h3 id="Contact">Contact:</h3>
+        <p>The best way to reach me is by either E-Mailing me at <a target="_blank" href="mailto:brooksalit@gmail.com">brooksalit@gmail.com</a>, or shooting me a message on <a target="_blank" href="https://www.linkedin.com/in/abrookst/">Linked-In</a>.</p>
+        <br>
+
+        <h3 id="Resume">Resume:</h3>
+        <script src="./scripts/resumeSelector.js"></script>
+        <div id="resumeSelector">
+          <form id="resumeForm">
+            <label class="container">
+              <p class="labelText">Graphics</p>
+              <input type="radio" name="radio" value="Graphics" onclick="handleClick(this.value);">
+              <span class="checkmark"></span>
+              
+            </label>
+            <label class="container">
+              <p class="labelText">Gameplay</p>
+              <input type="radio" name="radio" value="Gameplay" onclick="handleClick(this.value);">
+              <span class="checkmark"></span>
+            </label>
+          </form>
+          
+          <div id="resumePDF">
+            <p>Please choose a resume to view.</p>
+          </div>
+        </div>
+        
+
+      </div>
+      <div id="navigator">
+        <img src="./images/logo.png" id="logo">
+        <div id="navContent">
+            <div class="navItem" id="AboutButton"><a href="#About" class="nostyle">About</a></div>
+            <div class="navItem" id="PortfolioButton"><a href="#Portfolio" class="nostyle">Portfolio</a></div>
+            <div class="navItem" id="ContactButton"><a href="#Contact" class="nostyle">Contact</a></div>
+            <div class="navItem" id="ResumeButton"><a href="#Resume" class="nostyle">Resume</a></div>
+        </div>
+      </div>
+      <!--<script src="./scripts/scrollControl.js"></script> -->
+  </body>
 </html>

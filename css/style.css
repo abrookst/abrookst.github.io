@@ -1,233 +1,289 @@
-/*SET UP*/
-:root{
-    --color1: #d0d058;
-    --color2: #a0a840;
-    --color3: #708028;
-    --color4: #405010;
-}
-html {
-    color: var(--color4);
-    background-color: var(--color1);
-    
-}
-
-*{
-    font-family: 'apple_regular';
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 @font-face {
-    font-family: 'apple_regular';
-    src: url('../fonts/gbfont.woff2') format('woff2'),
-        url('../fonts/gbfont.woff') format('woff');
+    font-family: 'ds_regular';
+    src: url('../fonts/Nintendo-DS-BIOS.woff2') format('woff2'),
+        url('../fonts/Nintendo-DS-BIOS.woff') format('woff'),
+        url('../fonts/Nintendo-DS-BIOS.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
+*{
+    font-family: 'ds_regular';
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--color4);
+html{
+    --main-color:#fb0018;
+    --accent-1: #fba2aa;
+    --accent-2: #fb5159;
+    --accent-3: #cb0000;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--color1);
+body {
+    background-image: url("../images/bg.gif");
+    background-color: var(--accent-1);
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color3);
+h1{
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--accent-1);
+    text-shadow: 2px 2px 0px var(--accent-3);
 }
 
-/*BOX CLASSES*/
-.box {
-    margin:auto;
-    height: 70vh;
-    width: 70%;
-    padding: 10px;
-    overflow-y: auto;
-    border: 5px solid var(--color3);
-    box-shadow: 6px 6px 0 0 var(--color4);
-    background-color: var(--color2);
+h2{
+    font-size: 200%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
-.projectWrapper > .box{
-    margin: 0px;
+h3{
+    font-size: 175%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: var(--accent-1);
+    text-shadow: 2px 2px 0px var(--accent-3);
 }
 
-.projectImg{
-    max-width: 100%;
-    margin-left: -8px;
-    border: 5px solid var(--color3);
-    box-shadow: 6px 6px 0 0 var(--color4);
+p{
+    margin: 0;
+    font-size: 125%;
 }
 
-.projectNav{
-    height: 70vh;
-    width: 15%;
-    padding: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    border: 5px solid var(--color3);
-    box-shadow: 6px 6px 0 0 var(--color4);
-    background-color: var(--color2);
-}
-.projectWrapper{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
+a{
+    color: var(--accent-3)
 }
 
-.center{
-    margin-left: auto;
+#mainContent{
+    margin-top: 2.5%;
     margin-right: auto;
-    text-align: center;
-}
-
-/*HEADER PULSE*/
-.headerPulse {
-    text-align: center;
-    -webkit-animation: color_change 1s infinite alternate;
-    -moz-animation: color_change 1s infinite alternate;
-    -ms-animation: color_change 1s infinite alternate;
-    -o-animation: color_change 1s infinite alternate;
-    animation: color_change 1s infinite alternate;
-    animation-timing-function: steps(4, end);
-}
-
-@-webkit-keyframes color_change {
-    from {
-        color: var(--color3);
-    }
-
-    to {
-        color: var(--color4);
-    }
-}
-
-@-moz-keyframes color_change {
-    from {
-        color: var(--color3);
-    }
-
-    to {
-        color: var(--color4);
-    }
-}
-
-@-ms-keyframes color_change {
-    from {
-        color: var(--color3);
-    }
-
-    to {
-        color: var(--color4);
-    }
-}
-
-@-o-keyframes color_change {
-    from {
-        color: var(--color3);
-    }
-
-    to {
-        color: var(--color4);
-    }
-}
-
-@keyframes color_change {
-    from {
-        color: var(--color3);
-    }
-
-    to {
-        color: var(--color4);
-    }
-}
-
-/*HEADER COMPONENTS*/
-#header {
-    height: 5vh;
-    width: 70vw;
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    text-align: left;
-}
-
-#header * {
-    display: inline;
+    margin-bottom: 2.5%;
+    margin-left: auto;
     padding: 5px;
-    vertical-align: middle;
-    white-space: nowrap;
+    width: 70%;
+    border: 3px solid black;
+    background-image: url("../images/contentBG.png");
+    background-color: white;
+    border-radius: 5px;
 }
 
-#logo {
-    height: 100%;
+#navigator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12%;
+    margin: 1%;
 }
 
-.cursor {
-    position: relative;
-    height: 50%;
+#navContent{
+    border:  3px solid black;
+    border-radius: 5px;
+    width: 100%;
+    background-image: url("../images/contentBGAL.png");
+    background-color: white;
 }
 
-.abtcursor{
-
-    height: 15px;
+#selected{
+    background-color: var(--accent-2);
+    border-color: var(--accent-3);
 }
 
-.hidden {
-    visibility: hidden;
-}
-/*THEME COMPONENTS*/
-#themeToggle{
-    margin: 5px;
-    height: 10vh;
-    position: absolute;
-    right: 0;
-    top:0;
-
-}
-
-/*ABOUT TOGGLE*/
-.selectorBox{
-    margin:auto;
-    border: 5px solid var(--color3);
-    box-shadow: 6px 6px 0 0 var(--color4);
-    background-color: var(--color1);
-    width: fit-content;
+.navItem{
+    margin: 8px;
     padding: 4px;
+    font-size: x-large;
+    overflow-x: hidden;
+    background-color: var(--accent-1);
+    border: 2px var(--accent-2) solid;
+    outline: 3px var(--accent-3) solid;
+    outline-offset: 1;
+    border-radius: 5px;
+    text-align: center;
 }
-.text-module{
+
+#logo{
+    width: 100%;
+}
+
+#resumeSelector{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#resumeForm{
+    width: 50%;
+    justify-content: right;
+    text-align: center;
+}
+
+#resumeSelector > *{
+    margin: 10px
+}
+
+#resumePDF{
+    width: 100%;
+    aspect-ratio: 1 / 1.4142;
+    border: 4px black solid;
+    border-radius: 5px;
+    padding: 2px;
+    background-image: url("../images/contentBGAlt2.png");
+}
+
+#pdfObj{
+    width: inherit;
+    aspect-ratio: 1 / 1.4142;
+}
+
+#dsPortfolio{
+    display: flex; 
+    width: 100%;
+    height: 8em;
+}
+
+#leftPortfolio{
+    display:flex;
+    flex-wrap: wrap;
+    width: 50%;
+    
+    overflow-y: scroll;
+    background-image: url("../images/contentBGAlt3.png");
+    padding: 5px;
+    margin: 2px;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    
+}
+#rightPortfolio {
+    width: 50%;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    background-image: url(../images/contentBGAlt2.png);
+}
+
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+/** radio buttons **/
+ /* Customize the label (the container) */
+ .container {
+    display: block;
+    position: relative;
+    padding-left: 30%;
+    margin-bottom: 12px;
     cursor: pointer;
-}
-
-/*MISC CSS*/
-
-input[type=button], input[type="file"]::file-selector-button, input[type=submit], input[type=reset] {
-    background-color: var(--color2);
-    border: 3px solid var(--color3);
-    color: var(--color4);
-    font-family: 'apple_regular';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: fit-content;
+    font-size: 150%;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
-}
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    background-color: #eee;
+    border: black 3px solid;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    width: 65%;
+    margin: 17.5%;
+    aspect-ratio: 1 / 1;
+    background: var(--main-color);
+  } 
 
-form{
+  /* Pictochat boxes */
+  .pictochat {
+    font-size: medium;
+    width: 90%;
+    padding: 0;
+    background-color: white;
+    border: var(--accent-2) 2px solid;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    margin: 3px;
+  }
 
-/*PROJECT CSS*/
-.projectCover{
-    background-color: var(--color2);
-}
+  .pictochat-header{
+    margin: 0;
+    background-color: var(--accent-1);
+    width: 30%;
+    padding: 1px;
+    border-bottom: var(--accent-2) 2px solid;
+    border-right: var(--accent-2) 2px solid;
+    border-bottom-right-radius: 3px;
+    margin-bottom: -2px;
+    z-index: 2
+  }
+
+  .pictochat-content{
+    background-image: linear-gradient(var(--accent-1) .1em, transparent .1em);
+    background-color: transparent;
+    background-size: 100% 1.2em;
+    flex-grow: 8;
+    line-break: anywhere;
+    overflow-y: hidden;
+    padding: 1px;
+    line-height: 1.2;
+    height: 4.7em;
+    position: relative;
+    z-index: 1;
+
+  }
+
+  .pictochat-image{
+    width: 40%;
+    right:0;
+    position: absolute;
+    z-index: -1;
+  }
+
+
