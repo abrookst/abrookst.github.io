@@ -12,77 +12,112 @@
 
   <body>
       <div id="mainContent">
-        <h1 id="title">Ali Brooks</h1>
-        <h2 id="subTitle">Student, Researcher, and Gameplay/Graphics Programmer</h2>
-        <br>
+        <h1 id="title">ALI BROOKS</h1>
 
-        <h3 id="About">About:</h3>
-        <p>Hello! My name is Ali Brooks. I'm a current Junior studying Computer Science and Mathematics at Rensselaer Polytechnic Institute. I have taken multiple high-level classes so far, such as Graph Theory, Computer Vision, and Linear Algebra.</p>
-        <br>
-        <p>I've had an internship every year thus far during my schooling. All of these internships have been at notable AAA studios. My freshman summer, I worked at Firaxis Games, as a UI/UX Engineer, working on Civilization VII. Then, my sophomore summer, I worked on Diablo IV for Blizzard Entertainment as a Gameplay Engineer.</p>
-        <br>
-        <p>In addition to my school and work, I am constantly working on fun new projects, that you can see below in the projects section.</p>
-        <br>
-        <p>If you'd like to contact me, you can do so below in the contact section. I'd love to chat!</p>
-        <br>
+        <h3 id="About"><span style="color:#dfef00;">Now entering</span>: About</h3>
+        <div class="pictochat">
+          <div class="pictochat-header">School</div>
+          <div class="pictochat-content">
+            <p>Hello! My name is Ali Brooks. I'm a current Junior studying Computer Science and Mathematics at Rensselaer Polytechnic Institute.</p>
+            <br>
+            <p>I have taken multiple high-level classes so far, such as Graph Theory, Computer Vision, and Linear Algebra.</p>
+          </div>
+        </div>
+        <div class="pictochat">
+          <div class="pictochat-header">Internships</div>
+          <div class="pictochat-content">
+            <p>I've had an internship every year thus far during my schooling. All of these internships have been at notable AAA studios. My freshman summer, I worked at Firaxis Games, as a UI/UX Engineer, working on Civilization VII. Then, my sophomore summer, I worked on Diablo IV for Blizzard Entertainment as a Gameplay Engineer.</p>
+          </div>
+        </div>
+        <div class="pictochat">
+          <div class="pictochat-header">Projects and More</div>
+          <div class="pictochat-content">
+            <p>In addition to my school and work, I am constantly working on fun new projects, that you can see below in the projects section.</p>
+            <br>
+            <p>If you'd like to contact me, you can do so below in the contact section. I'd love to chat!</p>
+          </div>
+        </div>
 
-        <h3 id="Portfolio">Portfolio Highlights:</h3>
-        <p>Click on a project for a picture.</p>
+        <h3 id="Portfolio"><span style="color:#dfef00;">Now entering</span>: Portfolio Highlights</h3>
         <script src="./scripts/projectSwitch.js"></script>
-        <div id="dsPortfolio">
-          <div id="leftPortfolio">
-            <div class="pictochat" onclick="projectSwitch('https://raw.githubusercontent.com/abrookst/raytracing/main/final.png')">
+            <div class="pictochat">
               <div class="pictochat-header">Raytracing</div>
               <div class="pictochat-content">
               A simple raytracer built in C++.
               <br>
               <a target="_blank" href="https://github.com/abrookst/Raytracing">Github</a>
+              <br>
+              <img src="https://raw.githubusercontent.com/abrookst/raytracing/main/final.png">
               </div>
             </div>
 
-            <div class="pictochat" onclick="projectSwitch('./images/raycast sample.gif')">
+            <div class="pictochat">
               <div class="pictochat-header">Raycasting</div>
               <div class="pictochat-content">
               A raycaster built in C++, similar to the original Wolfenstein.
               <br>
               <a target="_blank" href="https://github.com/abrookst/raycasting">Github</a>
+              <br>
+              <img src="./images/raycast sample.gif">
               </div>
             </div>
 
-          </div>
-          <div id="rightPortfolio">
-            Nothing Selected...
-          </div>
-        </div>
-        <p>For more projects, either visit my <a target="_blank" href="https://github.com/abrookst">Github</a> or check out my <a target="_blank" href="https://abrookst.itch.io/">Itch.io</a></p>
-
-        <h3 id="Contact">Contact:</h3>
-        <p>The best way to reach me is by either E-Mailing me at <a target="_blank" href="mailto:brooksalit@gmail.com">brooksalit@gmail.com</a>, or shooting me a message on <a target="_blank" href="https://www.linkedin.com/in/abrookst/">Linked-In</a>.</p>
-        <br>
-
-        <h3 id="Resume">Resume:</h3>
-        <script src="./scripts/resumeSelector.js"></script>
-        <div id="resumeSelector">
-          <form id="resumeForm">
-            <label class="container">
-              <p class="labelText">Graphics</p>
-              <input type="radio" name="radio" value="Graphics" onclick="handleClick(this.value);">
-              <span class="checkmark"></span>
-              
-            </label>
-            <label class="container">
-              <p class="labelText">Gameplay</p>
-              <input type="radio" name="radio" value="Gameplay" onclick="handleClick(this.value);">
-              <span class="checkmark"></span>
-            </label>
-          </form>
-          
-          <div id="resumePDF">
-            <p>Please choose a resume to view.</p>
-          </div>
-        </div>
+            <div class="pictochat">
+              <div class="pictochat-header">Panparu</div>
+              <div class="pictochat-content">
+              A Virtual-Pet game developed in Unity. 
+              <br>
+              <a target="_blank" href="https://github.com/abrookst/Panparu">Github</a>
+              <a target="_blank" href="https://abrookst.itch.io/panparu">Itch</a>
+              <br>
+              <img src="https://img.itch.zone/aW1hZ2UvMjIxMjUxMi8xMzA5NzQyNy5wbmc=/794x1000/RcvMzc.png">
+              </div>
+            </div>
+          <div class="pictochat">
+              <div class="pictochat-header">Moreprojects</div>
+              <div class="pictochat-content">
+                <p>For more projects, either visit my <a target="_blank" href="https://github.com/abrookst">Github</a> or check out my <a target="_blank" href="https://abrookst.itch.io/">Itch.io</a></p>
+              </div>
+            </div>
         
+        <h3 id="Contact"><span style="color:#dfef00;">Now entering</span>: Contact</h3>
+        <div class="pictochat">
+          <div class="pictochat-header">Contact</div>
+          <div class="pictochat-content">
+            <p>The best way to reach me is by either EMailing me at <a target="_blank" href="mailto:brooksalit@gmail.com">brooksalit@gmail.com</a>.</p>
+            <p>You can also send me a message on <a target="_blank" href="https://www.linkedin.com/in/abrookst/">Linked-In</a>.</p>
+          </div>
+        </div>
 
+        <h3 id="Resume"><span style="color:#dfef00;">Now entering</span>: Resume</h3>
+        <script src="./scripts/resumeSelector.js"></script>
+        <div class="pictochat">
+          <div class="pictochat-header">SelectResume</div>
+          <div class="pictochat-content">
+            <form id="resumeForm">
+              <label class="container">
+                <p class="labelText">Graphics</p>
+                <input type="radio" name="radio" value="Graphics" onclick="handleClick(this.value);">
+                <span class="checkmark"></span>
+                
+              </label>
+              <label class="container">
+                <p class="labelText">Gameplay</p>
+                <input type="radio" name="radio" value="Gameplay" onclick="handleClick(this.value);">
+                <span class="checkmark"></span>
+              </label>
+            </form>
+          </div>
+        </div>
+          
+        <div class="pictochat">
+          <div class="pictochat-header">Resume</div>
+          <div class="pictochat-content">
+            <div id="resumePDF">
+              <p>Please choose a resume to view.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="navigator">
         <img src="./images/logo.png" id="logo">

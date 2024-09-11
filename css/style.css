@@ -6,48 +6,61 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'pictochat';
+    src: url('../fonts/pictochat.woff2') format('woff2'),
+        url('../fonts/pictochat.woff') format('woff'),
+        url('../fonts/pictochat.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     font-family: 'ds_regular';
+    font-weight: normal;
+    font-size: inherit;
 }
 
 html{
     --main-color:#fb0018;
-    --accent-1: #fba2aa;
+    --accent-1: #ffd1d5;
     --accent-2: #fb5159;
     --accent-3: #cb0000;
 }
 
 body {
     background-image: url("../images/bg.gif");
-    background-color: var(--accent-1);
+    background-color: #d3d3d3;
 }
 
 h1{
-    font-size: 300%;
-    text-align: center;
-    margin-bottom: 0;
-    color: var(--accent-1);
-    text-shadow: 2px 2px 0px var(--accent-3);
+    margin: 0;
+    color: #d2cac2;
+    background-color: #696969;
+    padding: 5px;
+    border: white 2px solid;
+    outline: #888888 2px solid;
+    border-radius: 5px;
 }
 
 h2{
-    font-size: 200%;
-    text-align: center;
     margin-top: 0;
     margin-bottom: 5px;
 }
 
 h3{
-    font-size: 175%;
     margin-bottom: 5px;
     margin-top: 10px;
-    color: var(--accent-1);
-    text-shadow: 2px 2px 0px var(--accent-3);
+    color: #cec6be;
+    background-color: black;
+    padding: 5px;
+    border: white 2px solid;
+    outline: black 2px solid;
+    border-radius: 5px;
 }
 
 p{
     margin: 0;
-    font-size: 125%;
 }
 
 a{
@@ -61,10 +74,7 @@ a{
     margin-left: auto;
     padding: 5px;
     width: 70%;
-    border: 3px solid black;
-    background-image: url("../images/contentBG.png");
-    background-color: white;
-    border-radius: 5px;
+
 }
 
 #navigator{
@@ -91,7 +101,6 @@ a{
 .navItem{
     margin: 8px;
     padding: 4px;
-    font-size: x-large;
     overflow-x: hidden;
     background-color: var(--accent-1);
     border: 2px var(--accent-2) solid;
@@ -124,7 +133,6 @@ a{
 #resumePDF{
     width: 100%;
     aspect-ratio: 1 / 1.4142;
-    border: 4px black solid;
     border-radius: 5px;
     padding: 2px;
     background-image: url("../images/contentBGAlt2.png");
@@ -136,16 +144,15 @@ a{
 }
 
 #dsPortfolio{
-    display: flex; 
-    width: 100%;
-    height: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin:auto;
 }
 
 #leftPortfolio{
     display:flex;
-    flex-wrap: wrap;
-    width: 50%;
-    
+    width: 100%;
     overflow-y: scroll;
     background-image: url("../images/contentBGAlt3.png");
     padding: 5px;
@@ -156,13 +163,18 @@ a{
     
 }
 #rightPortfolio {
-    width: 50%;
+    width: 100%;
+    aspect-ratio: 16/9;
     justify-content: center;
     border: 2px black solid;
     border-radius: 5px;
     padding: 5px;
     margin: 2px;
     background-image: url(../images/contentBGAlt2.png);
+}
+#rightPortfolio > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 
@@ -181,17 +193,22 @@ a.nostyle:visited {
 /** radio buttons **/
  /* Customize the label (the container) */
  .container {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: 30%;
-    margin-bottom: 12px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     width: fit-content;
-    font-size: 150%;
+    height: 1.2em;
+    margin: 2px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .labelText{
+    margin-left: 44%;
+    vertical-align: middle;
   }
   
   /* Hide the browser's default radio button */
@@ -206,12 +223,13 @@ a.nostyle:visited {
   /* Create a custom radio button */
   .checkmark {
     position: absolute;
+    margin-top: 4px;
     top: 0;
     left: 0;
     aspect-ratio: 1 / 1;
-    height: 100%;
+    height: 50%;
     background-color: #eee;
-    border: black 3px solid;
+    border: 2px black solid;
   }
   
   /* On mouse-over, add a grey background color */
@@ -241,15 +259,14 @@ a.nostyle:visited {
 
   /* Pictochat boxes */
   .pictochat {
-    font-size: medium;
-    width: 90%;
+    width: 100%;
     padding: 0;
     background-color: white;
     border: var(--accent-2) 2px solid;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
-    margin: 3px;
+    margin-bottom: 3px;
   }
 
   .pictochat-header{
@@ -269,14 +286,17 @@ a.nostyle:visited {
     background-color: transparent;
     background-size: 100% 1.2em;
     flex-grow: 8;
-    line-break: anywhere;
+    line-break:normal;
     overflow-y: hidden;
-    padding: 1px;
+    padding-left: 3px;
     line-height: 1.2;
-    height: 4.7em;
     position: relative;
     z-index: 1;
+  }
 
+  .pictochat-content > img {
+    max-height: 20vh;
+    max-width: 100%;
   }
 
   .pictochat-image{
