@@ -12,13 +12,11 @@ var limit = window.scrollMaxY || (document.documentElement.scrollHeight - docume
 addScrollListener()
 
 addEventListener("resize", (event) => {
-    console.log("resize")
     limit = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
     addScrollListener()
 });
 
 function scrolling() {
-    console.log(window.scrollY)
     let selectedButton = null
     if (window.scrollY > (resume.offsetTop - resume.offsetHeight)) {
         if(activeButton == resumeButton) {return}
