@@ -68,7 +68,6 @@ a{
 }
 
 #mainContent{
-    margin-top: 2.5%;
     margin-right: auto;
     margin-bottom: 2.5%;
     margin-left: auto;
@@ -95,19 +94,32 @@ a{
 
 #selected{
     background-color: var(--accent-2);
-    border-color: var(--accent-3);
+    border-top: 3px var(--accent-1) solid;
+    border-bottom: none;
 }
 
 .navItem{
     margin: 8px;
     padding: 4px;
     overflow-x: hidden;
-    background-color: var(--accent-1);
-    border: 2px var(--accent-2) solid;
-    outline: 3px var(--accent-3) solid;
+    background-color: #989898;
+    border-bottom: 3px #6c6c6c solid;
     outline-offset: 1;
-    border-radius: 5px;
     text-align: center;
+    aspect-ratio: 6 / 1;
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .navItem{
+        font-size: 1.2vmin;
+    }
+    #mainContent{
+        margin-right: 0;
+    }
+    #navigator{
+        width: 30%;
+    }
 }
 
 #logo{
@@ -273,7 +285,7 @@ a.nostyle:visited {
     margin: 0;
     background-color: var(--accent-1);
     width: 30%;
-    padding: 1px;
+    padding: 4px;
     border-bottom: var(--accent-2) 2px solid;
     border-right: var(--accent-2) 2px solid;
     border-bottom-right-radius: 3px;
